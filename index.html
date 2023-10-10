@@ -5,64 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot N' Cold</title>
+    <script type="text/javascript" src="script.js" async></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
     <header>
         <h1>Hot N' Cold</h1>
 
-        <p>Welcome to Hot N' Cold!</p>
-        <p>You will have 5 guesses.</p>
-        <p>Click the number buttons to edit your guess.</p>
-        <p>Click submit when you're sure of your guess.</p>
-        <p>Hot means you're close to the number, cold means you're far.</p>
-        <p>Have fun!</p>
+        <div class="start">
+            <p>Welcome to Hot N' Cold!</p>
+            <p>You will have 5 guesses.</p>
+            <p>Click the number buttons to edit your guess.</p>
+            <p>Click submit when you're sure of your guess.</p>
+            <p>Hot means you're close to the number, cold means you're far.</p>
+            <p>Have fun!</p>
+        </div>
 
     </header>
     
-    <button id="sr">Play!</button>
+    <button class="start" id="begin">Play!</button>
+    
+    <button class="game" id="restart1" hidden>Reset</button>
 
-    <div>
-        <h2>Enter your Guess!</h2>
+    
+    <div class="game" hidden>
+        <div>
+            <h2 id="hint">Enter your Guess!</h2>
+    
+            <p>Guesses Remaining: <span id="r">5</span></p>
+    
+            <h2 id="g">50</h2>
+    
+        </div>
+    
+        <div>
+            <section class="add">
+                <p class="guessbuttons">Add</p>
+    
+                <button class="b" id="b1" >1</button>
+    
+                <button class="b" id="b5">5</button>
+    
+                <button class="b" id="b10">10</button>
+    
+                <button class="b" id="b25">25</button>
+            </section>
+    
+            <section class="Subtract">
+                <p class="guessbuttons">Subtract</p>
+                <button class="b" id="b-1">-1</button>
+    
+                <button class="b" id="b-5">-5</button>
+    
+                <button class="b" id="b-10">-10</button>
+    
+                <button class="b" id="b-25">-25</button>
+            </section>
+            
+            <br>
 
-        <h3>Guesses Remaining: <span id="r">5</span></h3>
-
-        <h2 id="g">50</h2>
+            <button id="sub">Commit</button>
+            
+        </div>
 
     </div>
-
-    <div>
-        <section class="add">
-            <button class="b" id="b1" >1</button>
-
-            <button class="b" id="b5">5</button>
-
-            <button class="b" id="b10">10</button>
-
-            <button class="b" id="b25">25</button>
-        </section>
-
-        <section class="Subtract">
-            <button class="b" id="b-1">-1</button>
-
-            <button class="b" id="b-5">-5</button>
-
-            <button class="b" id="b-10">-10</button>
-
-            <button class="b" id="b-25">-25</button>
-        </section>
-        
-
-        <section class="actions">
-            <button id="sub">Submit</button>
-        </section>
-    </div>
         
         
-    <aside>
+    <div id="hintlog" class="game" hidden>
         <h2>Guess Log</h2>
 
-        <p id="log"></p>
-    </aside>
+        <section id="log"><section>
+    </div>
     
+    <div id="lose" hidden>
+        <h2>Game Over :&#40;</h2>
+        <p>You've run out of guesses</p>
+        <p> Answer: <span id="answerl"></span></p>
+    </div>
+
+    <div id="win" hidden>
+        <h2>You won! :&#41;</h2>
+        <p> Answer: <span id="answerw"></span></p>
+    </div>
+    
+    <p id="rbutton" hidden>Click <button id="restart">restart</button> to play again</p>
+
 </body>
 </html>

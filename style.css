@@ -1,0 +1,101 @@
+*{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-image: url(gradient2.0.png);
+}
+
+h1{
+    background-color: whitesmoke;
+    max-width: fit-content;
+    margin: 10px auto 15px auto;
+    border: 10px groove black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+p{
+    font-size: 18px;
+}
+
+.guessbuttons{
+    text-decoration: underline green 4px;
+}
+
+#r{
+    color: red;
+}
+
+#restart{
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    color: blue;
+}
+
+#restart:hover {
+    color: red;
+    font-size: 20px;
+}
+
+#hint{
+    color: gray;
+    background-color: aliceblue;
+    text-shadow: 0 2px 1px black;
+    max-width:fit-content;
+    margin: 10px auto 10px auto;
+    border: 5px outset purple;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#g{
+    font-size: 35px;
+}
+
+#log{
+    height: 250px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 5px;
+    margin: 5px auto 5px auto;
+    max-width: 500px;
+    border: 2px solid #212121;
+    border-radius: 15px;
+
+    ::-webkit-scrollbar{
+        width: 20px;
+    }
+
+    ::-webkit-scrollbar-track{
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background: black;
+        border-radius: 20px;
+    }
+
+}
+
+#restart1{
+    font-size: 18px;
+    background-color: red;
+    border: 2px inset black;
+}
+
+#sub{
+    font-size: 18px;
+    background-color: #65AB5A;
+    border: 2px inset black;
+}
+
+button.b{
+    font-size: 14px;
+    background-color: whitesmoke;
+    border: 2px dotted gray;
+    border-radius: 5px;
+}
